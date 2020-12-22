@@ -15,8 +15,8 @@ static const unsigned int gappov    = 3;       /* vert outer gap between windows
 static       int smartgaps          = 1;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=10" };
-static const char dmenufont[]       = "monospace:size=10";
+static const char *fonts[]          = { "DroidSansMono Nerd Font:size=11:antialias=true:autohint=true" };
+static const char dmenufont[]       = "DroidSansMono Nerd Font:size=11:antialias=true:autohint:true"; 
 //backgorund color
 static const char col_gray1[]       = "#222222";
 //inactive window border color
@@ -24,9 +24,11 @@ static const char col_gray2[]       = "#444444";
 //fontcolor
 static const char col_gray3[]       = "#bbbbbb";
 //current tag and current window font color
-static const char col_gray4[]       = "#eeeeee";
+//static const char col_gray4[]       = "#eeeeee";
+static const char col_gray4[]       = "#27292c";
 //Top bar second color (blue) and active window border
-static const char col_cyan[]        = "#005577";
+//static const char col_cyan[]        = "#005577";
+static const char col_cyan[]        = "#7693ac";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
@@ -34,22 +36,26 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+
+static const char *tags[] = { "   ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  " };
 
 static const Rule rules[] = {
 	/* xprop(1):
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+	/* class                     instance    title         tags mask     isfloating   monitor */
+	{ "Gimp",                    NULL,       NULL,         1 << 3,       1,           -1 },
+	{ "Spotify",                 NULL,       NULL,         1 << 8,       0,           -1 },
+	{ "discord",                 NULL,       NULL,         1 << 6,       0,           -1 },
+	{ "Steam",                   NULL,       NULL,         1 << 7,       0,           -1 },
+//	{ "libreoffice-writer",      NULL,       NULL,         1 << 4,       0,           -1 },
 };
 
 /* layout(s) */
 static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
-static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
+static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
 
 #define FORCE_VSPLIT 1  /* nrowgrid layout: force two clients to always split vertically */
 #include "vanitygaps.c"
