@@ -15,8 +15,8 @@ static const unsigned int gappov    = 3;       /* vert outer gap between windows
 static       int smartgaps          = 1;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "DroidSansMono Nerd Font:size=11:antialias=true:autohint=true" };
-static const char dmenufont[]       = "DroidSansMono Nerd Font:size=11:antialias=true:autohint:true"; 
+static const char *fonts[]          = { "DroidSansMono Nerd Font:size=10:antialias=true:autohint=true" };
+static const char dmenufont[]       = "DroidSansMono Nerd Font:size=10:antialias=true:autohint:true"; 
 //backgorund color
 static const char col_gray1[]       = "#222222";
 //inactive window border color
@@ -28,7 +28,7 @@ static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#27292c";
 //Top bar second color (blue) and active window border
 //static const char col_cyan[]        = "#005577";
-static const char col_cyan[]        = "#7693ac";
+static const char col_cyan[]        = "#e1a574";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
