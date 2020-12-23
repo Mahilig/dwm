@@ -24,11 +24,11 @@ static const char col_gray2[]       = "#444444";
 //fontcolor
 static const char col_gray3[]       = "#bbbbbb";
 //current tag and current window font color
-//static const char col_gray4[]       = "#eeeeee";
-static const char col_gray4[]       = "#27292c";
+static const char col_gray4[]       = "#eeeeee";
+//static const char col_gray4[]       = "#27292c";
 //Top bar second color (blue) and active window border
 //static const char col_cyan[]        = "#005577";
-static const char col_cyan[]        = "#e1a574";
+static const char col_cyan[]        = "#4c7965";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
@@ -37,7 +37,7 @@ static const char *colors[][3]      = {
 
 /* tagging */
 
-static const char *tags[] = { "   ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  " };
+static const char *tags[] = { "   ", "   ", "   ", "   ", "   ", "   ", "   ", "   ", "  " };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -45,7 +45,7 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class                     instance    title         tags mask     isfloating   monitor */
-	{ "Gimp",                    NULL,       NULL,         1 << 3,       1,           -1 },
+	{ "Gimp",                    NULL,       NULL,         1 << 3,       0,           -1 },
 	{ "Spotify",                 NULL,       NULL,         1 << 8,       0,           -1 },
 	{ "discord",                 NULL,       NULL,         1 << 6,       0,           -1 },
 	{ "Steam",                   NULL,       NULL,         1 << 7,       0,           -1 },
