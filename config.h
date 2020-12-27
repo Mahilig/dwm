@@ -15,7 +15,7 @@ static const unsigned int gappov    = 3;       /* vert outer gap between windows
 static       int smartgaps          = 1;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "DroidSansMono Nerd Font:size=10:antialias=true:autohint=true" };
+static const char *fonts[]          = { "DroidSansMono Nerd Font:size=10:antialias=true:autohint=true", "JoyPixels:pixelsize=10:antialias=true:autohint=true" };
 static const char dmenufont[]       = "DroidSansMono Nerd Font:size=10:antialias=true:autohint:true"; 
 //backgorund color
 static const char col_gray1[]       = "#222222";
@@ -134,7 +134,7 @@ static Key keys[] = {
 	{ MODKEY,                   XK_period,       focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,         XK_comma,        tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,         XK_period,       tagmon,         {.i = +1 } },
-	{ MODKEY|ShiftMask,         XK_f,            spawn,          SHCMD("thunar") },
+	{ MODKEY|ShiftMask,         XK_f,            spawn,          SHCMD("nemo") },
 	{ MODKEY|ShiftMask,         XK_w,            spawn,          SHCMD("brave") },
 	{ MODKEY|ShiftMask,         XK_s,            spawn,          SHCMD("flameshot gui") },
     { 0,                        XK_Print,        spawn,          SHCMD("flameshot screen") },
@@ -157,6 +157,8 @@ static Key keys[] = {
 	{ 0, XF86XK_AudioNext,		spawn,		SHCMD("playerctl next") },
 	{ 0, XF86XK_AudioPause,		spawn,		SHCMD("playerctl play-pause") },
 	{ 0, XF86XK_AudioPlay,		spawn,		SHCMD("playerctl play-pause") },
+	{ 0, XF86XK_MonBrightnessUp,	spawn,		SHCMD("light -A 10") },
+	{ 0, XF86XK_MonBrightnessDown,	spawn,		SHCMD("light -U 10") },
 
 	/* { MODKEY|Mod4Mask,              XK_h,      incrgaps,       {.i = +1 } }, */
 	/* { MODKEY|Mod4Mask,              XK_l,      incrgaps,       {.i = -1 } }, */
