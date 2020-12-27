@@ -134,7 +134,7 @@ static Key keys[] = {
 	{ MODKEY,                   XK_period,       focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,         XK_comma,        tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,         XK_period,       tagmon,         {.i = +1 } },
-	{ MODKEY|ShiftMask,         XK_f,            spawn,          SHCMD("nemo") },
+	{ MODKEY|ShiftMask,         XK_f,            spawn,          SHCMD("thunar") },
 	{ MODKEY|ShiftMask,         XK_w,            spawn,          SHCMD("brave") },
 	{ MODKEY|ShiftMask,         XK_s,            spawn,          SHCMD("flameshot gui") },
     { 0,                        XK_Print,        spawn,          SHCMD("flameshot screen") },
