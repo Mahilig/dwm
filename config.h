@@ -71,14 +71,8 @@ static const Layout layouts[] = {
 	{ "[D]",      deck },                       /* Master on left, slaves in monocle-like mode on right */
 	{ "[M]",      monocle },                    /* All windows on top of each other */
 
-	{ "===",      bstackhoriz },                /* Stack horizontal */
-	{ "HHH",      grid },                       /* Grid */
-
-	{ "[@]",      spiral },                     /* Fibonnaci spiral */
-	{ "[\\]",     dwindle },                    /* Decreasing in size right and leftward */
-
-	{ "###",      nrowgrid },
-	{ "---",      horizgrid },
+//	{ "===",      bstackhoriz },                /* Stack horizontal */
+//	{ "HHH",      grid },                       /* Grid */
 
 	{ ":::",      gaplessgrid },
 	{ "><>",      NULL },    /* no layout function means floating behavior */
@@ -115,16 +109,15 @@ static Key keys[] = {
 	{ MODKEY,                   XK_l,            setmfact,       {.f = +0.05} },
 	{ MODKEY,                   XK_Return,       zoom,           {0} },
 	{ MODKEY,                   XK_Tab,          view,           {0} },
-	//{ MODKEY|ShiftMask,         XK_c,            killclient,     {0} },
 	{ MODKEY,                   XK_space,        setlayout,      {0} },
-    { MODKEY,		            XK_t,		     setlayout,	     {.v = &layouts[0]} }, /* tile */
-	{ MODKEY|ShiftMask,		    XK_t,		     setlayout,	     {.v = &layouts[1]} }, /* bstack */
-	{ MODKEY,			        XK_y,		     setlayout,	     {.v = &layouts[2]} }, /* centeredmaster */
-	{ MODKEY|ShiftMask,		    XK_y,		     setlayout,	     {.v = &layouts[3]} }, /* centeredfloatingmaster */
-	{ MODKEY,			        XK_u,		     setlayout,	     {.v = &layouts[4]} }, /* deck */
-	{ MODKEY|ShiftMask,		    XK_u,		     setlayout,	     {.v = &layouts[5]} }, /* monocle */
-	{ MODKEY,			        XK_i,		     setlayout,	     {.v = &layouts[6]} }, /* bstackgrid */
-	{ MODKEY|ShiftMask,		    XK_i,		     setlayout,	     {.v = &layouts[7]} }, /* grid */
+    { MODKEY,		            XK_t,		     setlayout,	     {.v = &layouts[0]} },
+	{ MODKEY|ShiftMask,		    XK_t,		     setlayout,	     {.v = &layouts[1]} },
+	{ MODKEY,			        XK_y,		     setlayout,	     {.v = &layouts[2]} },
+	{ MODKEY|ShiftMask,		    XK_y,		     setlayout,	     {.v = &layouts[3]} },
+	{ MODKEY,			        XK_u,		     setlayout,	     {.v = &layouts[4]} },
+	{ MODKEY|ShiftMask,		    XK_u,		     setlayout,	     {.v = &layouts[5]} },
+	{ MODKEY,			        XK_i,		     setlayout,	     {.v = &layouts[6]} },
+	{ MODKEY|ShiftMask,		    XK_i,		     setlayout,	     {.v = &layouts[7]} },
 	{ MODKEY,			        XK_o,		     incnmaster,     {.i = +1 } },
 	{ MODKEY|ShiftMask,		    XK_o,		     incnmaster,     {.i = -1 } },
 	{ MODKEY|ShiftMask,         XK_space,        togglefloating, {0} },
@@ -134,6 +127,7 @@ static Key keys[] = {
 	{ MODKEY,                   XK_period,       focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,         XK_comma,        tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,         XK_period,       tagmon,         {.i = +1 } },
+	{ MODKEY,                   XK_f,            togglefullscr,  {0} },
 	{ MODKEY|ShiftMask,         XK_f,            spawn,          SHCMD("thunar") },
 	{ MODKEY|ShiftMask,         XK_w,            spawn,          SHCMD("brave") },
 	{ MODKEY|ShiftMask,         XK_s,            spawn,          SHCMD("flameshot gui") },
