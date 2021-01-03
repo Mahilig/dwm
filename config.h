@@ -151,8 +151,8 @@ static Key keys[] = {
 	{ 0, XF86XK_AudioNext,		spawn,		SHCMD("playerctl next") },
 	{ 0, XF86XK_AudioPause,		spawn,		SHCMD("playerctl play-pause") },
 	{ 0, XF86XK_AudioPlay,		spawn,		SHCMD("playerctl play-pause") },
-	{ 0, XF86XK_MonBrightnessUp,	spawn,		SHCMD("light -A 10") },
-	{ 0, XF86XK_MonBrightnessDown,	spawn,		SHCMD("light -U 10") },
+	{ 0, XF86XK_MonBrightnessUp,	spawn,		SHCMD("brightnessctl s 10%+") },
+	{ 0, XF86XK_MonBrightnessDown,	spawn,		SHCMD("brightnessctl s 10%-") },
 
 	/* { MODKEY|Mod4Mask,              XK_h,      incrgaps,       {.i = +1 } }, */
 	/* { MODKEY|Mod4Mask,              XK_l,      incrgaps,       {.i = -1 } }, */
