@@ -50,6 +50,7 @@ static const Rule rules[] = {
 	{ "Spotify",                 NULL,       NULL,         1 << 8,       0,           -1 },
 	{ "discord",                 NULL,       NULL,         1 << 6,       0,           -1 },
 	{ "Steam",                   NULL,       NULL,         1 << 7,       0,           -1 },
+	{ "Thunderbird",             NULL,       NULL,         1 << 6,       1,           -1 },
 	{ "Galculator",              NULL,       NULL,         0,            1,           -1 },
 //	{ "libreoffice-writer",      NULL,       NULL,         1 << 4,       0,           -1 },
 };
@@ -98,11 +99,16 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "alacritty", NULL };
 
+static const char *dmenu[]  = { "dmenu_run", NULL };
+static const char *rofi[]  = { "rofi", "-show", NULL };
+
 #include <X11/XF86keysym.h>
 
 static Key keys[] = {
 	/* modifier                 key              function        argument */
-	{ MODKEY,                   XK_d,            spawn,          {.v = dmenucmd } },
+//	{ MODKEY,                   XK_d,            spawn,          {.v = dmenucmd } },
+//	{ MODKEY,                   XK_d,            spawn,          {.v = dmenu } },
+	{ MODKEY,                   XK_d,            spawn,          {.v = rofi } },
 	{ MODKEY|ShiftMask,         XK_Return,       spawn,          {.v = termcmd } },
 	{ MODKEY,                   XK_b,            togglebar,      {0} },
 	{ MODKEY,                   XK_j,            focusstack,     {.i = +1 } },
