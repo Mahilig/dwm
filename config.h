@@ -149,17 +149,17 @@ static Key keys[] = {
 	TAGKEYS(                    XK_7,                            6)
 	TAGKEYS(                    XK_8,                            7)
 	TAGKEYS(                    XK_9,                            8)
-	{ MODKEY|ShiftMask,         XK_q,            killclient,           {0} },
-	{ MODKEY|ShiftMask,         XK_BackSpace,    quit,     {0} },
+	{ MODKEY|ShiftMask,         XK_q,            killclient,     {0} },
+	{ MODKEY|ShiftMask,         XK_BackSpace,    quit,           {0} },
 
 	{ 0, XF86XK_AudioMute,		    spawn,		SHCMD("pamixer -t; kill -44 $(pidof dwmblocks)") },
 	{ 0, XF86XK_AudioRaiseVolume,	spawn,		SHCMD("pamixer --allow-boost -i 3; kill -44 $(pidof dwmblocks)") },
 	{ 0, XF86XK_AudioLowerVolume,	spawn,		SHCMD("pamixer --allow-boost -d 3; kill -44 $(pidof dwmblocks)") },
-	{ 0, XF86XK_AudioPrev,		spawn,		SHCMD("playerctl previous") },
-	{ 0, XF86XK_AudioNext,		spawn,		SHCMD("playerctl next") },
-	{ 0, XF86XK_AudioPause,		spawn,		SHCMD("playerctl play-pause") },
-	{ 0, XF86XK_AudioPlay,		spawn,		SHCMD("playerctl play-pause") },
-	{ 0, XF86XK_MonBrightnessUp,	spawn,		SHCMD("light -A 10") },
+	{ 0, XF86XK_AudioPrev,	   	    spawn,		SHCMD("playerctl previous") },
+	{ 0, XF86XK_AudioNext,	      	spawn,		SHCMD("playerctl next") },
+	{ 0, XF86XK_AudioPause,	      	spawn,		SHCMD("playerctl play-pause") },
+	{ 0, XF86XK_AudioPlay,	      	spawn,		SHCMD("playerctl play-pause") }, 
+    { 0, XF86XK_MonBrightnessUp,	spawn,		SHCMD("light -A 10") },
 	{ 0, XF86XK_MonBrightnessDown,	spawn,		SHCMD("light -U 10") },
 
 	/* { MODKEY|Mod4Mask,              XK_h,      incrgaps,       {.i = +1 } }, */
