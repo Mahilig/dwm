@@ -45,14 +45,15 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class                     instance    title         tags mask     isfloating   monitor */
-	{ "Gimp",                    NULL,       NULL,         1 << 3,       0,           -1 },
-	{ "Spotify",                 NULL,       NULL,         1 << 8,       0,           -1 },
-	{ "discord",                 NULL,       NULL,         1 << 6,       0,           -1 },
-	{ "Steam",                   NULL,       NULL,         1 << 7,       0,           -1 },
-	{ "Thunderbird",             NULL,       NULL,         1 << 6,       1,           -1 },
-	{ "Galculator",              NULL,       NULL,         0,            1,           -1 },
-//	{ "libreoffice-writer",      NULL,       NULL,         1 << 4,       0,           -1 },
+	/* class                        instance    title         tags mask     isfloating   monitor */
+	{ "Gimp",                       NULL,       NULL,         1 << 3,       0,           -1 },
+	{ "Spotify",                    NULL,       NULL,         1 << 8,       0,           -1 },
+	{ "discord",                    NULL,       NULL,         1 << 6,       0,           -1 },
+	{ "Steam",                      NULL,       NULL,         1 << 7,       0,           -1 },
+	{ "Thunderbird",                NULL,       NULL,         1 << 6,       0,           -1 },
+	{ "Galculator",                 NULL,       NULL,         0,            1,           -1 },
+	{ "Microsoft Teams - Preview",  NULL,       NULL,         1 << 6,       0,           -1 },
+//	{ "libreoffice-writer",         NULL,       NULL,         1 << 4,       0,           -1 },
 };
 
 /* layout(s) */
@@ -139,7 +140,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,         XK_f,            spawn,          SHCMD("thunar") },
 	{ MODKEY|ShiftMask,         XK_w,            spawn,          SHCMD("brave") },
 	{ MODKEY|ShiftMask,         XK_s,            spawn,          SHCMD("flameshot gui") },
-    { 0,                        XK_Print,        spawn,          SHCMD("flameshot screen") },
+    { 0,                        XK_Print,        spawn,          SHCMD("flameshot full -p ~/Pictures/Screenshots") },
 	TAGKEYS(                    XK_1,                            0)
 	TAGKEYS(                    XK_2,                            1)
 	TAGKEYS(                    XK_3,                            2)
