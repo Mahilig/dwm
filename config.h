@@ -28,8 +28,7 @@ static const char col_gray4[]       = "#222222";
 //static const char col_gray4[]       = "#27292c";
 //Top bar second color (blue) and active window border
 //static const char col_cyan[]        = "#005577";
-//static const char col_cyan[]        = "#4c7965";
-static const char col_cyan[]        = "#b9ca4a";
+static const char col_cyan[]        = "#5da75c";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
@@ -47,13 +46,13 @@ static const Rule rules[] = {
 	 */
 	/* class                        instance    title         tags mask     isfloating   monitor */
 	{ "Gimp",                       NULL,       NULL,         1 << 3,       0,           -1 },
-	{ "Spotify",                    NULL,       NULL,         1 << 8,       0,           -1 },
+//  { NULL,                         NULL,       "Spotify Premium",         1 << 8,       0,           -1 },
 	{ "discord",                    NULL,       NULL,         1 << 6,       0,           -1 },
 	{ "Steam",                      NULL,       NULL,         1 << 7,       0,           -1 },
 	{ "Thunderbird",                NULL,       NULL,         1 << 6,       0,           -1 },
 	{ "Galculator",                 NULL,       NULL,         0,            1,           -1 },
 	{ "Microsoft Teams - Preview",  NULL,       NULL,         1 << 6,       0,           -1 },
-//	{ "libreoffice-writer",         NULL,       NULL,         1 << 4,       0,           -1 },
+	{ NULL,                         NULL,       "LibreOffice",         1 << 4,       0,           -1 },
 };
 
 /* layout(s) */
