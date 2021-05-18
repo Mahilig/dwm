@@ -28,7 +28,7 @@ static const char col_gray4[]       = "#222222";
 //static const char col_gray4[]       = "#27292c";
 //Top bar second color (blue) and active window border
 //static const char col_cyan[]        = "#005577";
-static const char col_cyan[]        = "#5da75c";
+static const char col_cyan[]        = "#b9ca4a";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
@@ -51,6 +51,7 @@ static const Rule rules[] = {
 	{ "Steam",                      NULL,       NULL,         1 << 7,       0,           -1 },
 	{ "Thunderbird",                NULL,       NULL,         1 << 6,       0,           -1 },
 	{ "Galculator",                 NULL,       NULL,         0,            1,           -1 },
+	{ "Gnome-calculator",           NULL,       NULL,         0,            1,           -1 },
 	{ "Microsoft Teams - Preview",  NULL,       NULL,         1 << 6,       0,           -1 },
 	{ NULL,                         NULL,       "LibreOffice",         1 << 4,       0,           -1 },
 };
@@ -118,16 +119,16 @@ static Key keys[] = {
 	{ MODKEY,                   XK_Return,       zoom,           {0} },
 	{ MODKEY,                   XK_Tab,          view,           {0} },
 	{ MODKEY,                   XK_space,        setlayout,      {0} },
-    { MODKEY,                   XK_t,		     setlayout,	     {.v = &layouts[0]} },
-	{ MODKEY|ShiftMask,         XK_t,		     setlayout,	     {.v = &layouts[1]} },
-	{ MODKEY,                   XK_y,		     setlayout,	     {.v = &layouts[2]} },
-	{ MODKEY|ShiftMask,         XK_y,		     setlayout,	     {.v = &layouts[3]} },
-	{ MODKEY,                   XK_u,		     setlayout,	     {.v = &layouts[4]} },
-	{ MODKEY|ShiftMask,         XK_u,		     setlayout,	     {.v = &layouts[5]} },
-	{ MODKEY,                   XK_i,		     setlayout,	     {.v = &layouts[6]} },
-	{ MODKEY|ShiftMask,         XK_i,		     setlayout,	     {.v = &layouts[7]} },
-	{ MODKEY,                   XK_o,		     incnmaster,     {.i = +1 } },
-	{ MODKEY|ShiftMask,         XK_o,		     incnmaster,     {.i = -1 } },
+        { MODKEY,                   XK_t,            setlayout,	     {.v = &layouts[0]} },
+	{ MODKEY|ShiftMask,         XK_t,            setlayout,	     {.v = &layouts[1]} },
+	{ MODKEY,                   XK_y,            setlayout,	     {.v = &layouts[2]} },
+	{ MODKEY|ShiftMask,         XK_y,            setlayout,	     {.v = &layouts[3]} },
+	{ MODKEY,                   XK_u,            setlayout,     {.v = &layouts[4]} },
+	{ MODKEY|ShiftMask,         XK_u,            setlayout,     {.v = &layouts[5]} },
+	{ MODKEY,                   XK_i,            setlayout,     {.v = &layouts[6]} },
+	{ MODKEY|ShiftMask,         XK_i,            setlayout,     {.v = &layouts[7]} },
+	{ MODKEY,                   XK_o,            incnmaster,     {.i = +1 } },
+	{ MODKEY|ShiftMask,         XK_o,            incnmaster,     {.i = -1 } },
 	{ MODKEY|ShiftMask,         XK_space,        togglefloating, {0} },
 	{ MODKEY,                   XK_0,            view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,         XK_0,            tag,            {.ui = ~0 } },
@@ -139,7 +140,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,         XK_f,            spawn,          SHCMD("thunar") },
 	{ MODKEY|ShiftMask,         XK_w,            spawn,          SHCMD("brave") },
 	{ MODKEY|ShiftMask,         XK_s,            spawn,          SHCMD("flameshot gui") },
-    { 0,                        XK_Print,        spawn,          SHCMD("flameshot full -p ~/Pictures/Screenshots") },
+        { 0,                        XK_Print,        spawn,          SHCMD("flameshot full -p ~/Pictures/Screenshots") },
 	TAGKEYS(                    XK_1,                            0)
 	TAGKEYS(                    XK_2,                            1)
 	TAGKEYS(                    XK_3,                            2)
@@ -152,10 +153,10 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,         XK_q,            killclient,     {0} },
 	{ MODKEY|ShiftMask,         XK_BackSpace,    quit,           {0} },
 
-	{ 0, XF86XK_AudioMute,		    spawn,		SHCMD("pamixer -t; kill -44 $(pidof dwmblocks)") },
-	{ 0, XF86XK_AudioRaiseVolume,	spawn,		SHCMD("pamixer --allow-boost -i 3; kill -44 $(pidof dwmblocks)") },
-	{ 0, XF86XK_AudioLowerVolume,	spawn,		SHCMD("pamixer --allow-boost -d 3; kill -44 $(pidof dwmblocks)") },
-	{ 0, XF86XK_AudioPrev,	   	    spawn,		SHCMD("playerctl previous") },
+	{ 0, XF86XK_AudioMute,          spawn,          SHCMD("pamixer -t; kill -44 $(pidof dwmblocks)") },
+	{ 0, XF86XK_AudioRaiseVolume,	spawn,          SHCMD("pamixer --allow-boost -i 3; kill -44 $(pidof dwmblocks)") },
+	{ 0, XF86XK_AudioLowerVolume,	spawn,          SHCMD("pamixer --allow-boost -d 3; kill -44 $(pidof dwmblocks)") },
+	{ 0, XF86XK_AudioPrev,	   	spawn,          SHCMD("playerctl previous") },
 	{ 0, XF86XK_AudioNext,	      	spawn,		SHCMD("playerctl next") },
 	{ 0, XF86XK_AudioPause,	      	spawn,		SHCMD("playerctl play-pause") },
 	{ 0, XF86XK_AudioPlay,	      	spawn,		SHCMD("playerctl play-pause") }, 
