@@ -101,7 +101,9 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "alacritty", NULL };
 
 static const char *dmenu[]  = { "dmenu_run", NULL };
-static const char *rofi[]  = { "rofi", "-show", NULL };
+/*static const char *rofi[]  = { "rofi", "-show", NULL }; */
+static const char *rofi[]  = { "launcher_misc", NULL };
+static const char *powermenu[]  = { "powermenu", NULL };
 
 #include <X11/XF86keysym.h>
 
@@ -110,6 +112,7 @@ static Key keys[] = {
 //	{ MODKEY,                   XK_d,            spawn,          {.v = dmenucmd } },
 //	{ MODKEY,                   XK_d,            spawn,          {.v = dmenu } },
 	{ MODKEY,                   XK_d,            spawn,          {.v = rofi } },
+	{ MODKEY|ShiftMask,         XK_e,            spawn,          {.v = powermenu } },
 	{ MODKEY|ShiftMask,         XK_Return,       spawn,          {.v = termcmd } },
 	{ MODKEY,                   XK_b,            togglebar,      {0} },
 	{ MODKEY,                   XK_j,            focusstack,     {.i = +1 } },
